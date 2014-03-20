@@ -1,0 +1,6 @@
+C:\Users\asalim\Documents\Customers\EGI\XenAppTestLogin_source\XenAppLogin\bin\Debug\XenAppLogin.exe
+C:\Users\asalim\Documents\Customers\EGI\XenAppTestLogin_source\XenAppLogin\bin\Debug\XenAppLogin.pdb
+C:\Users\asalim\Documents\Customers\EGI\XenAppTestLogin_source\XenAppLogin\bin\Debug\WfIcaLib.dll
+C:\Users\asalim\Documents\Customers\EGI\XenAppTestLogin_source\XenAppLogin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\asalim\Documents\Customers\EGI\XenAppTestLogin_source\XenAppLogin\obj\Debug\XenAppLogin.exe
+C:\Users\asalim\Documents\Customers\EGI\XenAppTestLogin_source\XenAppLogin\obj\Debug\XenAppLogin.pdb

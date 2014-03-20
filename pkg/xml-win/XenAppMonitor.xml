@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
+	xmlns="http://www.uptimesoftware.com/erdc/erdc"
+	xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
+    <class>Citrix XenApp</class>
+    <exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
+    <elements>
+        <element name="process" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:20</control_options>
+            <default_value>scripts/XenAppMonitor/XenAppMonitor.bat</default_value>
+            <validation_rule/><error_message/>
+            <short_description>Script Executable</short_description>
+            <long_description>Script Executable.  Leave at the default value, unless otherwise noted.</long_description>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>                
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="DOMAIN" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:20</control_options>
+            <default_value></default_value>
+            <validation_rule/><error_message/>
+            <short_description>Domain</short_description>
+            <long_description>Domain</long_description>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>                
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+        <element name="USERNAME" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:20</control_options>
+            <default_value></default_value>
+            <validation_rule/><error_message/>
+            <short_description>Username</short_description>
+            <long_description>Username</long_description>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>                 
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+        <element name="PASSWORD" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+            <control_options>size:20</control_options>
+            <default_value></default_value>
+            <validation_rule/><error_message/>
+            <short_description>Password</short_description>
+            <long_description>Password</long_description>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>                 
+            <gui_type>
+                <password/>
+            </gui_type>
+        </element>
+        <element name="ApplicationResolutionTimems" parameter_type="output" data_type="decimal" gui_basic="1" units="ms" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Application Resolution Time (ms)</short_description>
+            <long_description>The time in milliseconds that a resolution took to complete. This is also the time required to determine the “least-loaded” server during an application launch.</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+		<element name="ApplicationResolutionsPersec" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Application Resolutions/sec</short_description>
+            <long_description>The number of resolutions (application launch requests) per second</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="ApplicationEnumerationsPersec" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Application Enumerations/sec</short_description>
+            <long_description>The number of non-XML-based enumerations (requests for application lists) per second</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="FilteredApplicationEnumerationsPersec" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Filtered Application Enumerations/sec</short_description>
+            <long_description>The number of XML-based enumerations (requests for application lists) per second</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="DataStoreConnectionFailure" parameter_type="output" data_type="decimal" gui_basic="1" units="min" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Data Store Connection Failure</short_description>
+            <long_description>The number of minutes that the XenApp server has been disconnected from the data store.</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="NumberofbusyXMLthreads" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Number of Busy XML Threads</short_description>
+            <long_description>The number of XML threads currently being processed. There are 16 worker threads in the Citrix XML Service. A count of 16 or more shows that XML requests are not being processed in a timely manner.</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="ResolutionWorkItemQueueReadyCount" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Resolution WorkItem Queue Ready Count</short_description>
+            <long_description>The number of resolution work items (related to application launches) that are ready to be executed. A value above 0 indicates that requests are being queued while IMA handles other requests.</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="WorkItemQueueReadyCount" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>WorkItem Queue Ready Count</short_description>
+            <long_description>The number of work items that are ready to be executed. A value above 0 indicates that requests are being queued while IMA handles other requests. This counter should not be over 1 for an extended period of time.</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+
+        <element name="RequestsQueued" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Requests Queued</short_description>
+            <long_description>The number of requests waiting to be processed by ASP. </long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="RequestsRejected" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Requests Rejected</short_description>
+            <long_description>The number of requests rejected because the request queue was full.</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="RequestsCurrent" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Requests Current</short_description>
+            <long_description>The current number of requests, both executing and queued</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="RequestExecutionTime" parameter_type="output" data_type="decimal" gui_basic="1" units="ms" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Request Execution Time</short_description>
+            <long_description>The amount of time (in milliseconds) that it took to execute the most recent request</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="TotalSessions" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Total Terminal Service Sessions</short_description>
+            <long_description>Total number of Terminal services sessions.</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+        <element name="DisconnectedSessions" parameter_type="output" data_type="decimal" gui_basic="1" units="" range_type="0">
+            <control_options>size:10</control_options>
+            <short_description>Total Disconnected Terminal Service Sessions</short_description>
+            <long_description>Total number of disconnected Terminal service sessions.</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+    </elements>
+    <help>When running a custom script check, note that the second parameter is always the name of the assigned host.
+	The script that's executed should output each variable on it's own line, otherwise up.time won't be able to capture the appropriate information.
+    </help>
+</uptime>
