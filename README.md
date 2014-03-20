@@ -1,4 +1,4 @@
 monitor-citrix-xenapp
 =====================
 
-Check connectivity to XenApp, then gather metrics.
+Launches an ICO session to test connectivity.  If successful, gathers XenApp metrics.

@@ -5,10 +5,19 @@
 	xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
     <class>Citrix XenApp</class>
     <exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
+	<erdc_version>4.0</erdc_version>
+	<category>Applications - General</category>
+	<category_related></category_related>
+	<grid_info>
+		<supported_versions>7.3</supported_versions>
+		<supported_platforms>windows</supported_platforms>
+		<upgrade_in_place>true</upgrade_in_place>
+		<requires_agent_scripts>false</requires_agent_scripts>
+	</grid_info>	
     <elements>
-        <element name="process" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+        <element name="process_windows" parameter_type="input" data_type="string" gui_basic="1" range_type="0" hidden="true">
             <control_options>size:20</control_options>
-            <default_value>scripts/XenAppMonitor/XenAppMonitor.bat</default_value>
+            <default_value>plugins/scripts/monitor-citrix-xenapp/monitor-citrix-xenapp.bat</default_value>
             <validation_rule/><error_message/>
             <short_description>Script Executable</short_description>
             <long_description>Script Executable.  Leave at the default value, unless otherwise noted.</long_description>
@@ -200,7 +209,5 @@
             </gui_type>
         </element>
     </elements>
-    <help>When running a custom script check, note that the second parameter is always the name of the assigned host.
-	The script that's executed should output each variable on it's own line, otherwise up.time won't be able to capture the appropriate information.
-    </help>
+    <help>Launches an ICO session to test connectivity.  If successful, gathers XenApp metrics.</help>
 </uptime>

@@ -1,6 +1,0 @@
-name=XenApp Monitor
-version=1.1
-platforms=windows
-description=Launches an ICO session to test connectivity.  If successful, gathers XenApp metrics.
-requiresAgentScript=false
-restartCore=false
