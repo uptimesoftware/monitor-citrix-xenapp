@@ -1,5 +1,5 @@
 monitor-citrix-xenapp
 =====================
-For Xenapp 6.5 and under only
+For Xenapp prior to v 6 only
 
 Launches an ICO session to test connectivity.  If successful, gathers XenApp metrics.
